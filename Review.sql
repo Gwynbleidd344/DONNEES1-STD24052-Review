@@ -34,7 +34,7 @@ ORDER BY contract_type.name;
 
 -- Afficher le nombre d’employés en congé aujourd'hui. La période de congé s'étend de start_date inclus jusqu’à end_date inclus.
 
-SELECT COUNT(employee_id)
+SELECT COUNT(DISTINCT employee_id)
 FROM leave
 WHERE CURRENT_DATE BETWEEN start_date AND end_date;
 
